@@ -1,0 +1,4 @@
+images/**
+results/**
+.env
+test**
