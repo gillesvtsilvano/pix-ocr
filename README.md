@@ -11,4 +11,4 @@ Será gerado um arquivo Excel (.xls) na pasta `./resultados` nomeado com a data 
 
 # Limitações conhecidas
 
-Limite de 1.000.000 de linhas no arqruivo de saída.
+Limite de 1.000.000 de linhas no arqruivo de saída para excel.
