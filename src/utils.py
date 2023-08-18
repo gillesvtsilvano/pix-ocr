@@ -29,7 +29,7 @@ def load_images(path: str) -> list:
                     setattr(img, 'hashfunc', 'sha1')
                     ret_images.append(img)
             else:
-                logging.warning('Could not read %s because it is not a file.', filename)
+                logging.warning('Could not read %s because it is not a file', filename)
     except Exception as exception:
         raise ValueError(f'Error trying to open images from \'{path}\'') from exception
     return ret_images
