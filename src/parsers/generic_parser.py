@@ -1,6 +1,5 @@
 import regex
 from document import Document
-from typing import Callable
 
 
 class GenericParser:
@@ -9,7 +8,7 @@ class GenericParser:
     #Generic Parser must not match any document
     document_regex__: str = r'(?=x)(?!x)'
     name: str = 'generic'
-    field_parsers: dict[str, Callable] = {
+    field_parsers: dict[str, str] = {
         'DATA': None,
         'HORA': None,
         'REMETENTE': None,
