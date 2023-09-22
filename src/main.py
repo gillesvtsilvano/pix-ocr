@@ -38,7 +38,7 @@ def main():
             else:
                 print(doc.image.filepath, doc.parser.name)
         except Exception as exception:
-            logging.warning('Could not process document of file %s', doc.image.filename)
+            logging.warning('Could not process document of file %s: %s', doc.image.filename, exception)
         documents.append(doc)
     # export_xls(output='file.xlsx', documents)
         

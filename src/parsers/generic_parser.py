@@ -1,5 +1,4 @@
 import regex
-from document import Document
 
 
 class GenericParser:
@@ -27,7 +26,7 @@ class GenericParser:
     }
 
     @classmethod
-    def classify_document(cls, document: Document) -> bool:
+    def classify_document(cls, document: any) -> bool:
         '''Classify a document'''
         match = False
         if not document:
