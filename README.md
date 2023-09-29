@@ -4,7 +4,16 @@ Tool for processing PIX payment images amd formating for IBM i2 using pytesserac
 
 ## Requirements
 
+### Windows
 - Install Microsoft C++ Build Tools from this [link](https://aka.ms/vs/17/release/vs_BuildTools.exe)
+
+### Linux
+- Install libGL.so.1
+```$ apt install libgl1```
+
+### Common
+
+
 - pip install -r requirements.txt
 - python src/main.py
 

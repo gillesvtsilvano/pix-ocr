@@ -1,14 +1,15 @@
-'''Module providing parsers for different type of images'''
+"""Module providing parsers for different type of images"""
+from typing import Any, Type
 
-from .generic_parser import GenericParser
-from .nubank_parser import NubankParser
+from .generic_pix_parser import GenericPixParser
+from .nubank_pix_parser import NubankPixParser
 
 
-def parser_factory(text: str) -> GenericParser:
-    '''Finds the correct parser for the Document and returns its object or None'''
+def parser_factory(text: str) -> Type[GenericPixParser] | Any:
+    """Finds the correct parser for the Document text and returns its Class or None"""
 
-    for subclass in GenericParser.__subclasses__():
-        result = subclass.classify_document(text)
+    for subclass in GenericPixParser.get_subclasses():
+        result = subclass.classify_text(text)
         if result:
-            return subclass()
-    return None
+            return subclass
+    return GenericPixParser

@@ -9,6 +9,6 @@ class OCR:
     __TESSERACT_LANG='por'
     
     @classmethod
-    def image_to_text(cls, img):
-        text = pytesseract.image_to_string(img, lang=cls.__TESSERACT_LANG, config=cls.__TESSERACT_PARAMS)
+    def image_to_text(cls, img_file):
+        text = pytesseract.image_to_string(img_file.image, lang=cls.__TESSERACT_LANG, config=cls.__TESSERACT_PARAMS)
         return text

@@ -6,13 +6,12 @@ name = "pypi"
 [packages]
 opencv-python = "*"
 pytesseract = "*"
+numpy = "*"
+cv = "*"
 
 [dev-packages]
 matplotlib = "*"
-ipykernel = "*"
-ipywidgets = "*"
 ipython = "*"
-pylint = "*"
 
 [requires]
 python_version = "3"
